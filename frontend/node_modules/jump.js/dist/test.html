@@ -1,0 +1,87 @@
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    position: relative;
+    height: 10000px;
+  }
+
+  .box {
+    position: absolute;
+    left: 10px;
+
+    width: 100px;
+    height: 100px;
+    background-color: black;
+  }
+
+  .box1 {
+    top: 100px;
+  }
+
+  .box2 {
+    top: 100vh;
+  }
+
+  .box3 {
+    top: 150vh;
+  }
+
+  .box4 {
+    top: 225vh;
+  }
+
+  .button {
+    z-index: 10;
+    position: fixed;
+    right: 10px;
+  }
+
+  .button1 {
+    top: 10px;
+  }
+
+  .button2 {
+    top: 50px;
+  }
+
+  .button3 {
+    top: 90px;
+  }
+
+  .button4 {
+    top: 130px;
+  }
+</style>
+
+<div class="container">
+  <div class="box box1"></div>
+  <div class="box box2"></div>
+  <div class="box box3"></div>
+  <div class="box box4"></div>
+</div>
+
+<button class="button button1">scroll 1</button>
+<button class="button button2">scroll 2</button>
+<button class="button button3">scroll 3</button>
+<button class="button button4">scroll 4</button>
+
+<script src="jump.min.js"></script>
+
+<script>
+  container = document.querySelector('.container')
+
+  var targets = Array.from(document.querySelectorAll('.box'))
+  var buttons = Array.from(document.querySelectorAll('.button'))
+
+  buttons.forEach((button, index) => button.addEventListener('click', event => {
+    event.preventDefault()
+
+    console.log(targets[index])
+    Jump(targets[index])
+  }))
+</script>
