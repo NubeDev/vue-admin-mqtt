@@ -128,5 +128,3 @@ Hardware Integration
 - Data security and authentication 
 - prototype did not consider data security, there is no authentication. Follow-up to consider the authentication mqtt broker, kafka and storm the auth method.
 
-# 5. repo
-https://coding.net/u/zlata/p/kakapo/git
